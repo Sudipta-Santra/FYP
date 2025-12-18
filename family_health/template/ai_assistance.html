@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Health Chat</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+    <link rel="stylesheet" href="css/ai.css" />
+  </head>
+  <body data-page="chat">
+    <div class="container">
+      <aside class="sidebar">
+        <button id="sidebarToggle" class="sidebar-toggle">☰</button>
+
+        <div class="sidebar-header">
+          <div class="logo">
+            <img src="image.png" class="image-h" />
+            <span>FamilyHealth</span>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <a href="index.html" data-page="dashboard"
+            ><i>🏠</i><span>Dashboard</span></a
+          >
+          <a href="add_members.html" data-page="family"
+            ><i>👨‍👩‍👧</i><span>Family Members</span></a
+          >
+          <a href="health_report.html" data-page="records"
+            ><i>📄</i><span>Health Records</span></a
+          >
+
+          <a href="medication.html" data-page="medication">
+            <i>⏰</i><span>Medication Reminders</span>
+          </a>
+
+          <a href="emergency.html" data-page="prescriptions"
+            ><i>💊</i><span>Emergency</span></a
+          >
+          <a href="ai_assistance.html" data-page="chat" class="active"
+            ><i>💬</i><span>Health Chat</span></a
+          >
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="user">
+            <strong>ABC XYZ</strong>
+            <small>abcxyz@gmail.com</small>
+          </div>
+          <a href="#" class="sign-out">Sign Out</a>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="navbar">
+          <h1>Health Chat</h1>
+          <p>Ask questions and get AI-based family health insights</p>
+        </header>
+
+        <section class="ai-grid">
+          <!-- Ask AI -->
+          <div class="card ai-input-card">
+            <h2>Ask About Family Health</h2>
+
+            <input
+              id="aiInput"
+              type="text"
+              placeholder="Ask about family health…"
+            />
+
+            <button id="askBtn" class="ask-btn">Ask AI</button>
+
+            <div id="aiResponse" class="ai-response">
+              AI insights will appear here…
+            </div>
+          </div>
+
+          <!-- Example Questions -->
+          <div class="card">
+            <h3 class="head-ai">Example Questions</h3>
+            <ul class="example-list">
+              <li>Who missed medicine today?</li>
+              <li>Show BP trend of mom</li>
+              <li>Is anyone at health risk this week?</li>
+            </ul>
+          </div>
+
+          <!-- Health Summary -->
+          <div class="card">
+            <h3 class="head-ai">Health Summary</h3>
+            <p id="healthSummary">
+              Family vitals are stable. No critical risks detected this week.
+            </p>
+          </div>
+
+          <!-- Predictive Alerts -->
+          <div class="card">
+            <h3 class="head-ai">Predictive Alerts</h3>
+            <ul id="predictiveAlerts" class="alert-list">
+              <li class="low">Low Risk: Overall family health is stable</li>
+            </ul>
+          </div>
+        </section>
+
+        <footer class="footer">© 2025 Family Health Management System</footer>
+      </main>
+    </div>
+
+    <script src="js/ai.js"></script>
+    <script src="js/sidebar.js"></script>
+  </body>
+</html>
