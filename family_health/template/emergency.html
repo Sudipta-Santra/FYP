@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emergency</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+    <link rel="stylesheet" href="css/emergency.css" />
+  </head>
+  <body data-page="emergency">
+    <div class="container">
+      <aside class="sidebar">
+        <button id="sidebarToggle" class="sidebar-toggle">☰</button>
+
+        <div class="sidebar-header">
+          <div class="logo">
+            <img src="image.png" class="image-h" />
+            <span>FamilyHealth</span>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <a href="index.html" data-page="dashboard"
+            ><i>🏠</i><span>Dashboard</span></a
+          >
+          <a href="add_members.html" data-page="family"
+            ><i>👨‍👩‍👧</i><span>Family Members</span></a
+          >
+          <a href="health_report.html" data-page="records"
+            ><i>📄</i><span>Health Records</span></a
+          >
+
+          <a href="medication.html" data-page="medication">
+            <i>⏰</i><span>Medication Reminders</span>
+          </a>
+
+          <a href="emergency.html" data-page="prescriptions" class="active"
+            ><i>💊</i><span>Emergency</span></a
+          >
+          <a href="ai_assistance.html" data-page="chat"
+            ><i>💬</i><span>Health Chat</span></a
+          >
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="user">
+            <strong>ABC XYZ</strong>
+            <small>abcxyz@gmail.com</small>
+          </div>
+          <a href="#" id="logout" class="sign-out">Sign Out</a>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="navbar danger-bar">
+          <h1>Emergency</h1>
+          <p>Quick access to critical health information and actions</p>
+        </header>
+
+        <section class="emergency-grid">
+          <!-- Critical Info -->
+          <div class="card critical-card">
+            <h2 class="emer">Critical Medical Info</h2>
+            <p><strong>Blood Group:</strong> O+</p>
+            <p><strong>Allergies:</strong> Penicillin</p>
+            <p><strong>Chronic Conditions:</strong> Diabetes</p>
+          </div>
+
+          <!-- Emergency Contacts -->
+          <div class="card">
+            <h2 class="emer">Emergency Contacts</h2>
+            <div class="add-contact">
+              <input
+                class="inp-emer"
+                id="contactName"
+                placeholder="Contact Name"
+              />
+              <input
+                class="inp-emer"
+                id="contactPhone"
+                placeholder="Phone Number"
+              />
+              <button class="add-con" id="addContactBtn" class="primary-btn">
+                Add Contact
+              </button>
+            </div>
+
+            <ul id="emergencyContacts" class="contact-list"></ul>
+          </div>
+
+          <!-- Emergency Actions -->
+          <div class="card action-card">
+            <h2 class="emer">Emergency Actions</h2>
+
+            <button id="callEmergencyBtn" class="danger-btn">
+              🚨 Call Emergency
+            </button>
+
+            <button id="sendHelpBtn" class="danger-outline-btn">
+              📩 Send Help Message
+            </button>
+
+            <div id="emergencyResponse" class="response-box"></div>
+          </div>
+        </section>
+
+        <footer class="footer">© 2025 Family Health Management System</footer>
+      </main>
+    </div>
+
+    <script type="module" src="js/emergency.js"></script>
+    <script src="js/sidebar.js"></script>
+  </body>
+</html>

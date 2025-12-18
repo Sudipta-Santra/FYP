@@ -1,0 +1,83 @@
+.ai-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin-top: 20px;
+}
+
+@media (max-width: 900px) {
+  .ai-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ai-input-card input {
+  width: 100%;
+  padding: 12px 14px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.ai-response {
+  margin-top: 12px;
+  background: #f4f6f9;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.example-list {
+  list-style: none;
+  padding: 0;
+}
+
+.example-list li {
+  padding: 8px 10px;
+  background: #eef3f9;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.alert-list {
+  list-style: none;
+  padding: 0;
+}
+
+.alert-list li {
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.low {
+  background: #e7f7ee;
+  color: #14532d;
+}
+
+.medium {
+  background: #fff4e5;
+  color: #92400e;
+}
+
+.high {
+  background: #fde8e8;
+  color: #991b1b;
+}
+
+.ask-btn {
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 10px;
+  cursor: pointer;
+  background-color: rgb(68, 152, 248);
+  color: rgb(31, 29, 29);
+  font-weight: 700;
+}
+
+.head-ai {
+  padding-bottom: 20px;
+}

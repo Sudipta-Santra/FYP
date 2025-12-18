@@ -1,0 +1,87 @@
+.reports-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin-top: 20px;
+}
+
+@media (max-width: 900px) {
+  .reports-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.adherence-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.adherence {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--success);
+  margin: 10px 0;
+}
+
+.download-card button {
+  margin-top: 12px;
+  width: 100%;
+}
+
+.muted {
+  font-size: 13px;
+  color: #666;
+  margin-top: 6px;
+}
+
+.comparison-card ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 12px;
+}
+
+.comparison-card li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #f5f8fc;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.improve {
+  color: var(--success);
+  font-weight: 600;
+}
+
+.stable {
+  color: #777;
+  font-weight: 600;
+}
+
+.decline {
+  color: var(--danger);
+  font-weight: 600;
+}
+
+.reports-grid canvas {
+  width: 100% !important;
+  height: 260px !important;
+}
+.reports-grid .card:first-child {
+  min-height: 360px;
+}
+
+.primary-btn {
+  border: none;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: rgb(79, 190, 75);
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+}

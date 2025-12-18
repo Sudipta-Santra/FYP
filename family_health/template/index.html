@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Family Health Management</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+  </head>
+  <body data-page="dashboard">
+    <div class="container">
+      <aside class="sidebar">
+        <button id="sidebarToggle" class="sidebar-toggle">☰</button>
+        <div class="sidebar-header">
+          <div class="logo">
+            <img src="../image/image.png" class="image-h" />
+            <span>FamilyHealth</span>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <a href="index.html" data-page="dashboard">
+            <i>🏠</i><span>Dashboard</span>
+          </a>
+
+          <a href="add_members.html" data-page="family">
+            <i>👨‍👩‍👧</i><span>Family Members</span>
+          </a>
+
+          <a href="health_report.html" data-page="records">
+            <i>📄</i><span>Health Records</span>
+          </a>
+
+          <a href="medication.html" data-page="medication">
+            <i>⏰</i><span>Medication Reminders</span>
+          </a>
+
+          <a href="emergency.html" data-page="prescriptions">
+            <i>💊</i><span>Emergency</span>
+          </a>
+
+          <a href="ai_assistance.html" data-page="chat">
+            <i>💬</i><span>Health Chat</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="user">
+            <strong>ABC XYZ</strong>
+            <small>abcxyz@gmail.com</small>
+          </div>
+          <a href="#" id="logout" class="sign-out">Sign Out</a>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="navbar">
+          <h1>Family Health Management System</h1>
+          <p>AI-powered family wellness overview</p>
+        </header>
+
+        <div class="content-grid">
+          <div class="card health-score">
+            <h3 class="para">Family Health Score</h3>
+            <div class="score">82%</div>
+            <span class="status good">Good</span>
+          </div>
+
+          <div class="card fam">
+            <h3 class="para">Family Members</h3>
+            <p class="count" id="memberCount">0</p>
+          </div>
+
+          <div class="card em">
+            <h3 class="para">Emergency Contacts</h3>
+            <p class="count" id="emergencyCount">0</p>
+          </div>
+
+          <div class="card med">
+            <h3 class="para">Medication Reminders</h3>
+            <p class="count" id="medicationCount">0</p>
+          </div>
+
+          <div class="card ai-insights">
+            <h3 class="para">AI Insights</h3>
+            <ul>
+              <li>Family health stable this week</li>
+              <li class="alert">1 medication missed yesterday</li>
+            </ul>
+          </div>
+        </div>
+
+        <footer class="footer">© 2025 Family Health Management System</footer>
+      </main>
+    </div>
+    <script type="module" src="js/dashboard.js"></script>
+    <script type="module" src="js/sidebar.js"></script>
+  </body>
+</html>

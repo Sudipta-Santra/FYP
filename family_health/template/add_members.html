@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add members</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+    <link rel="stylesheet" href="css/members.css" />
+  </head>
+  <body data-page="family">
+    <div class="dashboard">
+      <aside class="sidebar">
+        <button id="sidebarToggle" class="sidebar-toggle">☰</button>
+        <div class="sidebar-header">
+          <div class="logo">
+            <img src="image.png" class="image-h" />
+            <span>FamilyHealth</span>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <a href="index.html" data-page="dashboard">
+            <i>🏠</i><span>Dashboard</span>
+          </a>
+
+          <a href="add_members.html" data-page="family">
+            <i>👨‍👩‍👧</i><span>Family Members</span>
+          </a>
+
+          <a href="health_report.html" data-page="records">
+            <i>📄</i><span>Health Records</span>
+          </a>
+
+          <a href="medication.html" data-page="medication">
+            <i>⏰</i><span>Medication Reminders</span>
+          </a>
+
+          <a href="emergency.html" data-page="prescriptions">
+            <i>💊</i><span>Emergency</span>
+          </a>
+
+          <a href="ai_assistance.html" data-page="chat">
+            <i>💬</i><span>Health Chat</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="user">
+            <strong>ABC XYZ</strong>
+            <small>abcxyz@gmail.com</small>
+          </div>
+          <a href="#" id="logout" class="sign-out">Sign Out</a>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="navbar">
+          <h1>Family Members</h1>
+          <p>Add, manage, and control access to family health data</p>
+        </header>
+
+        <section class="members-layout">
+          <!-- Form -->
+          <div class="card member-form">
+            <h2>Add Family Member</h2>
+
+            <form id="addMemberForm">
+              <div class="form-grid">
+                <div>
+                  <label>Name</label>
+                  <input name="name" required />
+                </div>
+
+                <div>
+                  <label>Age</label>
+                  <input name="age" type="number" required />
+                </div>
+
+                <div>
+                  <label>Gender</label>
+                  <select name="gender" required>
+                    <option value="">Select</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label>Blood Group</label>
+                  <input name="blood" required />
+                </div>
+              </div>
+
+              <h3>Medical History</h3>
+              <input
+                name="conditions"
+                placeholder="Chronic Diseases"
+                class="inp"
+              />
+              <input name="allergies" placeholder="Allergies" />
+
+              <h3>Permissions</h3>
+              <select name="permissions">
+                <option>Only Me</option>
+                <option>Family Members</option>
+              </select>
+
+              <button type="submit" class="primary-btn">Add Member</button>
+            </form>
+          </div>
+
+          <!-- Member List (future-ready) -->
+          <!-- Member List -->
+          <div class="card member-list">
+            <h2>Family Members</h2>
+
+            <ul id="memberList" class="member-items">
+              <!-- Members injected here by JS -->
+            </ul>
+
+            <p id="emptyState" class="empty-state">No members added yet.</p>
+          </div>
+        </section>
+
+        <footer class="footer">© 2025 Family Health Management System</footer>
+      </main>
+    </div>
+    <script type="module" src="js/sidebar.js"></script>
+    <script type="module" src="js/family.js"></script>
+  </body>
+</html>
