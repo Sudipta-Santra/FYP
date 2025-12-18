@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Register | HealthCare+</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+    body{
+      height:100vh;
+      background:linear-gradient(to right,#1abc9c,#16a085);
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .container{
+      width:400px;
+      background:#fff;
+      border-radius:18px;
+      box-shadow:0 15px 30px rgba(0,0,0,0.2);
+      padding:35px;
+      text-align:center;
+    }
+
+    h2{color:#1abc9c;margin-bottom:8px;}
+    p{font-size:14px;color:#777;margin-bottom:20px;}
+
+    .input-box{position:relative;margin-bottom:15px;}
+    .input-box i{position:absolute;top:50%;left:15px;transform:translateY(-50%);color:#1abc9c;}
+    .input-box input{
+      width:100%;
+      padding:12px 12px 12px 45px;
+      border-radius:30px;
+      border:1px solid #ddd;
+      outline:none;
+    }
+
+    button{
+      width:100%;
+      padding:12px;
+      background:#1abc9c;
+      border:none;
+      color:#fff;
+      border-radius:30px;
+      font-size:16px;
+      cursor:pointer;
+      margin-top:10px;
+    }
+
+    button:hover{background:#16a085;}
+
+    .toggle{
+      margin-top:18px;
+      font-size:14px;
+    }
+
+    .toggle a{color:#1abc9c;cursor:pointer;text-decoration:none;font-weight:500;}
+
+    .register-form{display:none;}
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Login Form -->
+    <div class="login-form">
+      <h2>HealthCare+</h2>
+      <p>Patient Login</p>
+      <form>
+        <div class="input-box">
+          <i class="fas fa-envelope"></i>
+          <input type="email" placeholder="Email Address" required>
+        </div>
+        <div class="input-box">
+          <i class="fas fa-lock"></i>
+          <input type="password" placeholder="Password" required>
+        </div>
+        <button>Login</button>
+      </form>
+      <div class="toggle">
+        Don’t have an account? <a onclick="showRegister()">Register</a>
+      </div>
+    </div>
+
+    <!-- Register Form -->
+    <div class="register-form">
+      <h2>Create Account</h2>
+      <p>Patient Registration</p>
+      <form>
+        <div class="input-box">
+          <i class="fas fa-user"></i>
+          <input type="text" placeholder="Full Name" required>
+        </div>
+        <div class="input-box">
+          <i class="fas fa-envelope"></i>
+          <input type="email" placeholder="Email Address" required>
+        </div>
+        <div class="input-box">
+          <i class="fas fa-lock"></i>
+          <input type="password" placeholder="Password" required>
+        </div>
+        <div class="input-box">
+          <i class="fas fa-lock"></i>
+          <input type="password" placeholder="Confirm Password" required>
+        </div>
+        <button>Register</button>
+      </form>
+      <div class="toggle">
+        Already have an account? <a onclick="showLogin()">Login</a>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function showRegister(){
+      document.querySelector('.login-form').style.display='none';
+      document.querySelector('.register-form').style.display='block';
+    }
+    function showLogin(){
+      document.querySelector('.register-form').style.display='none';
+      document.querySelector('.login-form').style.display='block';
+    }
+  </script>
+
+</body>
+</html>
