@@ -12,11 +12,16 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
 
     body{
       height:100vh;
-      background:linear-gradient(to right,#1abc9c,#16a085);
+      background:linear-gradient(to right,#74ebd5,#9face6);
       display:flex;
       justify-content:center;
       align-items:center;
@@ -31,11 +36,30 @@
       text-align:center;
     }
 
-    h2{color:#1abc9c;margin-bottom:8px;}
-    p{font-size:14px;color:#777;margin-bottom:20px;}
+    h2{
+      color:#1abc9c;
+      margin-bottom:8px;
+    }
 
-    .input-box{position:relative;margin-bottom:15px;}
-    .input-box i{position:absolute;top:50%;left:15px;transform:translateY(-50%);color:#1abc9c;}
+    p{
+      font-size:14px;
+      color:#777;
+      margin-bottom:20px;
+    }
+
+    .input-box{
+      position:relative;
+      margin-bottom:15px;
+    }
+
+    .input-box i{
+      position:absolute;
+      top:50%;
+      left:15px;
+      transform:translateY(-50%);
+      color:#1abc9c;
+    }
+
     .input-box input{
       width:100%;
       padding:12px 12px 12px 45px;
@@ -56,16 +80,25 @@
       margin-top:10px;
     }
 
-    button:hover{background:#16a085;}
+    button:hover{
+      background:#16a085;
+    }
 
     .toggle{
       margin-top:18px;
       font-size:14px;
     }
 
-    .toggle a{color:#1abc9c;cursor:pointer;text-decoration:none;font-weight:500;}
+    .toggle a{
+      color:#1abc9c;
+      cursor:pointer;
+      text-decoration:none;
+      font-weight:500;
+    }
 
-    .register-form{display:none;}
+    .register-form{
+      display:none;
+    }
   </style>
 </head>
 <body>
@@ -85,7 +118,7 @@
           <i class="fas fa-lock"></i>
           <input type="password" placeholder="Password" required>
         </div>
-        <button>Login</button>
+        <button type="submit">Login</button>
       </form>
       <div class="toggle">
         Don’t have an account? <a onclick="showRegister()">Register</a>
@@ -113,7 +146,7 @@
           <i class="fas fa-lock"></i>
           <input type="password" placeholder="Confirm Password" required>
         </div>
-        <button>Register</button>
+        <button type="submit">Register</button>
       </form>
       <div class="toggle">
         Already have an account? <a onclick="showLogin()">Login</a>
@@ -124,12 +157,13 @@
 
   <script>
     function showRegister(){
-      document.querySelector('.login-form').style.display='none';
-      document.querySelector('.register-form').style.display='block';
+      document.querySelector('.login-form').style.display = 'none';
+      document.querySelector('.register-form').style.display = 'block';
     }
+
     function showLogin(){
-      document.querySelector('.register-form').style.display='none';
-      document.querySelector('.login-form').style.display='block';
+      document.querySelector('.register-form').style.display = 'none';
+      document.querySelector('.login-form').style.display = 'block';
     }
   </script>
 
