@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Family Health Management</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f0f7ff;
+    color: #333;
+}
+
+/* HERO SECTION */
+.hero {
+    background: linear-gradient(120deg, #0a6ebd, #00b4d8);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: auto;
+    opacity: 0.95;
+}
+
+/* MAIN CONTAINER */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(to right, #0a6ebd, #00b4d8);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.card h2 {
+    margin-bottom: 15px;
+    color: #0a6ebd;
+}
+
+.card p {
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+/* ICON STYLE */
+.icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0a6ebd, #00b4d8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* MISSION SECTION */
+.mission {
+    margin-top: 60px;
+    background: white;
+    padding: 50px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    align-items: center;
+}
+
+.mission h2 {
+    color: #0a6ebd;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.mission p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.mission-box {
+    background: linear-gradient(135deg, #0a6ebd, #00b4d8);
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+/* FOOTER */
+footer {
+    background: #0a6ebd;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 80px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Family Health Management System</h1>
+    <p>
+        A smart digital solution to manage your family's health records,
+        appointments, and wellness securely in one place.
+    </p>
+</section>
+
+<!-- CONTENT -->
+<div class="container">
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">👨‍👩‍👧‍👦</div>
+            <h2>Who We Are</h2>
+            <p>
+                We are a healthcare-focused web platform designed to help families
+                organize and manage medical data efficiently and securely.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🩺</div>
+            <h2>What We Do</h2>
+            <p>
+                Our system maintains digital health records, appointment schedules,
+                medication reminders, and health history for every family member.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🔐</div>
+            <h2>Secure & Reliable</h2>
+            <p>
+                We use secure authentication and access control to ensure that
+                sensitive health information stays private and protected.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">💡</div>
+            <h2>Why Choose Us</h2>
+            <p>
+                Simple interface, easy access, and reliable data management make
+                our platform ideal for modern family healthcare needs.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- MISSION -->
+    <div class="mission">
+        <div>
+            <h2>Our Mission</h2>
+            <p>
+                Our mission is to improve healthcare accessibility by providing
+                families with a centralized, user-friendly platform to manage
+                health information and make informed medical decisions.
+            </p>
+        </div>
+
+        <div class="mission-box">
+            <h2>Our Vision</h2>
+            <p>
+                To create a healthier future by connecting families with
+                technology-driven healthcare solutions that are secure,
+                reliable, and easy to use.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2025 Family Health Management System | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>

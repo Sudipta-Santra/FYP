@@ -1,0 +1,263 @@
+:root {
+  --primary: #4a90e2;
+  --secondary: #2e527e;
+  --success: #28a745;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --bg: #f0f2f5;
+  --card-bg: #ffffff;
+  --text-dark: #1e2a38;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-dark);
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  overflow: visible;
+}
+
+.sidebar-toggle {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.sidebar.collapsed {
+  width: 80px;
+}
+
+.sidebar.collapsed span {
+  display: none;
+}
+
+.sidebar.collapsed .sidebar-nav a {
+  justify-content: center;
+}
+
+.sidebar.collapsed .sidebar-footer {
+  display: none;
+}
+
+.sidebar {
+  width: 260px;
+  transition: width 0.25s ease;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+}
+.sign-out {
+  text-decoration: none;
+  color: #113257;
+  font-weight: 800;
+}
+
+.sidebar.collapsed {
+  width: 80px;
+}
+.sidebar.collapsed span {
+  display: none;
+}
+.sidebar.collapsed .sidebar-nav a {
+  justify-content: center;
+}
+.sidebar.collapsed .sidebar-footer {
+  display: none;
+}
+
+.main-content {
+  margin-left: 260px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  transition: margin-left 0.25s ease;
+}
+
+.sidebar.collapsed + .main-content {
+  margin-left: 80px;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+.dashboard-grid .card {
+  border-radius: 14px;
+  padding: 22px 24px;
+  min-height: 140px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.health-score {
+  background: linear-gradient(135deg, #9be7c4, #c6f5e0);
+}
+
+.para {
+  font-size: 20px;
+  font-weight: 700;
+}
+.health-score .score {
+  font-size: 40px;
+  font-weight: 700;
+  color: #1e6f5c;
+  margin: 10px 0;
+}
+.count {
+  font-size: 40px;
+  font-weight: 700;
+  color: #1e6f5c;
+  margin: 10px 0;
+}
+.health-score .status {
+  align-self: flex-start;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.status.good {
+  background: #7ddf8c;
+  color: #14532d;
+}
+
+.dashboard-grid .card:not(.health-score):not(.ai-insights) {
+  background: #e9eef6;
+}
+
+.dashboard-grid .card h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.dashboard-grid .count {
+  font-size: 34px;
+  font-weight: 700;
+  color: #4a90e2;
+  margin-top: 10px;
+}
+
+.fam {
+  background: linear-gradient(135deg, #f5b7c8, #fcd1dc);
+}
+.em {
+  background: linear-gradient(135deg, rgb(135, 180, 248), rgb(178, 209, 255));
+}
+.med {
+  background: linear-gradient(135deg, rgb(255, 188, 133), rgb(255, 209, 171));
+}
+
+.dashboard-grid .card:nth-child(3) {
+  background: linear-gradient(135deg, #ffb3b3, #ffd1d1);
+}
+
+.dashboard-grid .card:nth-child(3) .count {
+  color: #b91c1c;
+}
+
+.dashboard-grid .card:nth-child(4) {
+  background: linear-gradient(135deg, #ffe2b3, #ffefd5);
+}
+
+.ai-insights {
+  background: linear-gradient(135deg, #dfc9fc, #e8dbfa);
+}
+
+.ai-insights h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.ai-insights ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ai-insights li {
+  font-size: 14px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.ai-insights li.alert {
+  background: #ffd6d6;
+  color: #9f1239;
+  font-weight: 600;
+}
+
+.navbar {
+  background: #4a90e2;
+  padding: 22px;
+  border-radius: 12px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.navbar h1 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.navbar p {
+  margin-top: 6px;
+  font-size: 15px;
+  opacity: 0.95;
+}
+.footer {
+  margin-top: auto;
+  text-align: center;
+  font-size: 13px;
+  color: #555;
+  padding: 12px 0;
+  width: 100%;
+}

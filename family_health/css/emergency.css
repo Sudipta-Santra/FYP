@@ -1,0 +1,98 @@
+.emergency-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin-top: 20px;
+}
+
+@media (max-width: 900px) {
+  .emergency-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.critical-card {
+  border-left: 6px solid var(--danger);
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.contact-list button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.action-card {
+  grid-column: span 2;
+}
+
+.danger-btn {
+  width: 100%;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: 700;
+  background: var(--danger);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.danger-outline-btn {
+  width: 100%;
+  padding: 14px;
+  border: 2px solid var(--danger);
+  color: var(--danger);
+  background: transparent;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.response-box {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #444;
+}
+
+.danger-bar {
+  background: linear-gradient(135deg, #e53935, #ef5350);
+  color: white;
+}
+
+.emer {
+  padding-bottom: 20px;
+}
+
+.inp-emer {
+  border: 1px solid #555;
+  padding: 10px;
+  border-radius: 7px;
+}
+
+.add-con {
+  border: none;
+  padding: 10px;
+  background-color: #e53935;
+  border-radius: 7px;
+  color: #eeeeee;
+  cursor: pointer;
+}

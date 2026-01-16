@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medication Reminders</title>
+
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+    <link rel="stylesheet" href="css/medication.css" />
+  </head>
+
+  <body data-page="medication">
+    <div class="container">
+      <!-- SIDEBAR (same as other pages) -->
+      <aside class="sidebar">
+        <button id="sidebarToggle" class="sidebar-toggle">☰</button>
+
+        <div class="sidebar-header">
+          <div class="logo">
+            <img src="image.png" class="image-h" />
+            <span>FamilyHealth</span>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <a href="index.html" data-page="dashboard">
+            <i>🏠</i><span>Dashboard</span>
+          </a>
+
+          <a href="add_members.html" data-page="family">
+            <i>👨‍👩‍👧</i><span>Family Members</span>
+          </a>
+
+          <a href="health_report.html" data-page="records">
+            <i>📄</i><span>Health Records</span>
+          </a>
+
+          <a href="medication.html" data-page="medication">
+            <i>⏰</i><span>Medication Reminders</span>
+          </a>
+
+          <a href="emergency.html" data-page="prescriptions">
+            <i>💊</i><span>Emergency</span>
+          </a>
+
+          <a href="ai_assistance.html" data-page="chat">
+            <i>💬</i><span>Health Chat</span>
+          </a>
+        </nav>
+      </aside>
+
+      <!-- MAIN -->
+      <main class="main-content">
+        <header class="navbar">
+          <h1>Medication Reminders</h1>
+          <p>Add medicines and reminder times</p>
+        </header>
+
+        <section class="medication-layout">
+          <!-- ADD MEDICATION -->
+          <div class="card">
+            <h2>Add Medicine</h2>
+
+            <form id="medForm">
+              <input name="name" placeholder="Medicine Name" required />
+              <input name="time" type="time" required />
+              <button class="primary-btn">Add Reminder</button>
+            </form>
+          </div>
+
+          <!-- LIST -->
+          <div class="card">
+            <h2>Active Reminders</h2>
+            <ul id="medList" class="med-list"></ul>
+            <p id="emptyMed" class="empty-state">No reminders added yet.</p>
+          </div>
+        </section>
+
+        <footer class="footer">© 2025 Family Health Management System</footer>
+      </main>
+    </div>
+
+    <script type="module" src="js/medication.js"></script>
+    <script src="js/sidebar.js"></script>
+  </body>
+</html>

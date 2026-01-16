@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Health Records</title>
+
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+    <link rel="stylesheet" href="css/reports.css" />
+  </head>
+
+  <body data-page="records">
+    <div class="container">
+      <aside class="sidebar">
+        <button id="sidebarToggle" class="sidebar-toggle">☰</button>
+
+        <div class="sidebar-header">
+          <div class="logo">
+            <img src="image.png" class="image-h" />
+            <span>FamilyHealth</span>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <a href="index.html" data-page="dashboard">
+            <i>🏠</i><span>Dashboard</span>
+          </a>
+
+          <a href="add_members.html" data-page="family">
+            <i>👨‍👩‍👧</i><span>Family Members</span>
+          </a>
+
+          <a href="health_report.html" data-page="records">
+            <i>📄</i><span>Health Records</span>
+          </a>
+
+          <a href="medication.html" data-page="medication">
+            <i>⏰</i><span>Medication Reminders</span>
+          </a>
+
+          <a href="emergency.html" data-page="prescriptions">
+            <i>💊</i><span>Emergency</span>
+          </a>
+
+          <a href="ai_assistance.html" data-page="chat">
+            <i>💬</i><span>Health Chat</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="user">
+            <strong>ABC XYZ</strong>
+            <small>abcxyz@gmail.com</small>
+          </div>
+          <a href="#" id="logout" class="sign-out">Sign Out</a>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="navbar">
+          <h1>Health Records</h1>
+          <p>Track trends, medication adherence, and medical reports</p>
+        </header>
+
+        <section class="reports-grid">
+          <div class="card">
+            <h2>Health Trends</h2>
+            <canvas id="bpChart"></canvas>
+          </div>
+
+          <div class="card adherence-card">
+            <h2>Medication Adherence</h2>
+            <div class="adherence">92%</div>
+            <p class="muted">Excellent adherence this week</p>
+          </div>
+
+          <div class="card download-card">
+            <h2>Download Medical Report</h2>
+            <button id="downloadReportBtn" class="primary-btn">
+              Download PDF
+            </button>
+            <p class="muted">
+              Includes trends, summaries, and notes for doctors
+            </p>
+          </div>
+
+          <div class="card comparison-card">
+            <h2>Weekly Comparison</h2>
+
+            <ul class="comparison-list">
+              <li>
+                Blood Pressure
+                <span class="improve">↑ Improved (−4 mmHg)</span>
+              </li>
+
+              <li>
+                Blood Sugar
+                <span class="stable">→ Stable</span>
+              </li>
+
+              <li>
+                Heart Rate
+                <span class="improve">↑ Improved (−3 bpm)</span>
+              </li>
+
+              <li>
+                Medication Adherence
+                <span class="improve">↑ Improved (+7%)</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <footer class="footer">© 2025 Family Health Management System</footer>
+      </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/reports.js"></script>
+    <script type="module" src="js/sidebar.js"></script>
+  </body>
+</html>
