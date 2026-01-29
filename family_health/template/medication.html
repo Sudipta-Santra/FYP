@@ -49,6 +49,17 @@
             <i>💬</i><span>Health Chat</span>
           </a>
         </nav>
+
+        <div class="sidebar-footer">
+          <div class="user">
+            <strong>ABC XYZ</strong>
+            <small>abcxyz@gmail.com</small>
+          </div>
+          <form action="{% url 'logout' %}" method="POST" style="width: 100%;">
+            {% csrf_token %}
+            <button type="submit" class="sign-out">Sign Out</button>
+          </form>
+        </div>
       </aside>
 
       <!-- MAIN -->

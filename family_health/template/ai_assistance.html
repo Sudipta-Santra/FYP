@@ -49,7 +49,10 @@
             <strong>ABC XYZ</strong>
             <small>abcxyz@gmail.com</small>
           </div>
-          <a href="#" class="sign-out">Sign Out</a>
+          <form action="{% url 'logout' %}" method="POST" style="width: 100%;">
+            {% csrf_token %}
+            <button type="submit" class="sign-out">Sign Out</button>
+          </form>
         </div>
       </aside>
 

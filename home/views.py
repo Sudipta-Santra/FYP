@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import TemplateView
 
 class IndexView(TemplateView):
@@ -21,3 +21,9 @@ def emergency(request):
 
 def ai_assistance(request):
     return render(request, 'ai_assistance.html')
+
+def login(request):
+    return render(request, 'login.html')
+
+def logout(request):
+    return redirect('login')
