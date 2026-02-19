@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Health Records</title>
 
-    <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/sidebar.css" />
-    <link rel="stylesheet" href="css/reports.css" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/sidebar.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/reports.css' %}" />
   </head>
 
   <body data-page="records">
@@ -17,33 +18,33 @@
 
         <div class="sidebar-header">
           <div class="logo">
-            <img src="image.png" class="image-h" />
+            <img src="{% static 'image/image.png' %}" class="image-h" />
             <span>FamilyHealth</span>
           </div>
         </div>
 
         <nav class="sidebar-nav">
-          <a href="index.html" data-page="dashboard">
+          <a href="{% url 'index' %}" data-page="dashboard">
             <i>🏠</i><span>Dashboard</span>
           </a>
 
-          <a href="add_members.html" data-page="family">
+          <a href="{% url 'add_members' %}" data-page="family">
             <i>👨‍👩‍👧</i><span>Family Members</span>
           </a>
 
-          <a href="health_report.html" data-page="records">
+          <a href="{% url 'health_report' %}" data-page="records">
             <i>📄</i><span>Health Records</span>
           </a>
 
-          <a href="medication.html" data-page="medication">
+          <a href="{% url 'medication' %}" data-page="medication">
             <i>⏰</i><span>Medication Reminders</span>
           </a>
 
-          <a href="emergency.html" data-page="prescriptions">
+          <a href="{% url 'emergency' %}" data-page="prescriptions">
             <i>💊</i><span>Emergency</span>
           </a>
 
-          <a href="ai_assistance.html" data-page="chat">
+          <a href="{% url 'ai_assistance' %}" data-page="chat">
             <i>💬</i><span>Health Chat</span>
           </a>
         </nav>
@@ -53,7 +54,10 @@
             <strong>ABC XYZ</strong>
             <small>abcxyz@gmail.com</small>
           </div>
-          <a href="#" id="logout" class="sign-out">Sign Out</a>
+          <form action="{% url 'logout' %}" method="POST" style="width: 100%;">
+            {% csrf_token %}
+            <button type="submit" class="sign-out">Sign Out</button>
+          </form>
         </div>
       </aside>
 
@@ -117,7 +121,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="js/reports.js"></script>
-    <script type="module" src="js/sidebar.js"></script>
+    <script src="{% static 'js/reports.js' %}"></script>
+    <script type="module" src="{% static 'js/sidebar.js' %}"></script>
   </body>
 </html>
