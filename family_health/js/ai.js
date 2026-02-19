@@ -4,7 +4,7 @@ const askBtn = document.getElementById("askBtn");
 const summary = document.getElementById("healthSummary");
 const alerts = document.getElementById("predictiveAlerts");
 
-// Mock AI responses for demonstration
+// Mock AI responses
 const responses = {
   "who missed medicine today":
     "AI Insight: John missed his morning medication today. Consider enabling reminder alerts.",
